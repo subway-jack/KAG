@@ -1,0 +1,58 @@
+namespace SpatioScene
+
+MotionSample(运动样本): EntityType
+	properties:
+		classId(类别ID): Integer
+		visualVec(视觉特征向量): VisualFeature
+		spatialIds(时空关系IDs): SpatioTemporalRelation
+		ts(时空数值序列): TimePoint
+		relationIds(主客关系IDs): Relation
+		imuVec(IMU特征向量): IMUFeature
+
+TimePoint(时空点): EntityType
+	properties:
+		dx(ΔX): Float
+		dy(ΔY): Float
+		h(高度): Float
+		dh(Δ高度): Float
+		x(位置X): Float
+		dd(Δ深度): Float
+		dz(ΔZ): Float
+		dw(Δ宽度): Float
+		d(深度): Float
+		w(宽度): Float
+		z(位置Z): Float
+		y(位置Y): Float
+		dt(Δ时间): Float
+		timestamp(时间戳): Float
+
+Relation(主客关系): EntityType
+	properties:
+		relationE(E关系编码): Integer
+		relationD(D关系编码): Integer
+		relationC(C关系编码): Integer
+		relationA(A关系编码): Integer
+		relationB(B关系编码): Integer
+
+SpatioTemporalRelation(时空主客关系): EntityType
+	properties:
+		tRel(时间先后关系): Integer
+		zRel(Z轴位置关系): Integer
+		yRel(Y轴位置关系): Integer
+		xRel(X轴位置关系): Integer
+
+FeatureValue(视觉特征): EntityType
+  properties:
+    dimensionIdx(维度索引): Integer   
+    featureValue(特征值): Float
+
+VisualFeature(视觉特征): EntityType
+  properties:
+    feature(特征值):  FeatureValue
+		constraint:MultiValue
+
+IMUFeature(IMU特征): EntityType
+  properties:
+    feature(特征值):  FeatureValue
+		constraint:MultiValue
+

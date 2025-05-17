@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1622559600.0",
+    "classId": 1,
+    "ts": "1622559600.0:ts",
+    "relationIds": "1622559600.0:rel",
+    "spatialIds": "1622559600.0:spa",
+    "visualVec": "1622559600.0:vis",
+    "imuVec": "1622559600.0:imu"
+  },
+  {
+    "id": "1622559605.5",
+    "classId": 2,
+    "ts": "1622559605.5:ts",
+    "relationIds": "1622559605.5:rel",
+    "spatialIds": "1622559605.5:spa",
+    "visualVec": "1622559605.5:vis",
+    "imuVec": null
+  },
+  {
+    "id": "1622559610.2",
+    "classId": 3,
+    "ts": "1622559610.2:ts",
+    "relationIds": "1622559610.2:rel",
+    "spatialIds": "1622559610.2:spa",
+    "visualVec": "1622559610.2:vis",
+    "imuVec": "1622559610.2:imu"
+  },
+  {
+    "id": "1622559615.8",
+    "classId": 4,
+    "ts": "1622559615.8:ts",
+    "relationIds": "1622559615.8:rel",
+    "spatialIds": "1622559615.8:spa",
+    "visualVec": "1622559615.8:vis",
+    "imuVec": "1622559615.8:imu"
+  },
+  {
+    "id": "1622559620.0",
+    "classId": 5,
+    "ts": "1622559620.0:ts",
+    "relationIds": "1622559620.0:rel",
+    "spatialIds": "1622559620.0:spa",
+    "visualVec": "1622559620.0:vis",
+    "imuVec": "1622559620.0:imu"
+  },
+  {
+    "id": "1622559625.3",
+    "classId": 6,
+    "ts": "1622559625.3:ts",
+    "relationIds": "1622559625.3:rel",
+    "spatialIds": "1622559625.3:spa",
+    "visualVec": "1622559625.3:vis",
+    "imuVec": "1622559625.3:imu"
+  },
+  {
+    "id": "1622559630.7",
+    "classId": 7,
+    "ts": "1622559630.7:ts",
+    "relationIds": "1622559630.7:rel",
+    "spatialIds": "1622559630.7:spa",
+    "visualVec": "1622559630.7:vis",
+    "imuVec": "1622559630.7:imu"
+  },
+  {
+    "id": "1622559635.1",
+    "classId": 8,
+    "ts": "1622559635.1:ts",
+    "relationIds": "1622559635.1:rel",
+    "spatialIds": "1622559635.1:spa",
+    "visualVec": "1622559635.1:vis",
+    "imuVec": null
+  },
+  {
+    "id": "1622559640.4",
+    "classId": 9,
+    "ts": "1622559640.4:ts",
+    "relationIds": "1622559640.4:rel",
+    "spatialIds": "1622559640.4:spa",
+    "visualVec": "1622559640.4:vis",
+    "imuVec": "1622559640.4:imu"
+  },
+  {
+    "id": "1622559645.9",
+    "classId": 10,
+    "ts": "1622559645.9:ts",
+    "relationIds": "1622559645.9:rel",
+    "spatialIds": "1622559645.9:spa",
+    "visualVec": "1622559645.9:vis",
+    "imuVec": "1622559645.9:imu"
+  }
+]

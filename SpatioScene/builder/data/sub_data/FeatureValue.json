@@ -1,0 +1,262 @@
+[
+  {
+    "id": "1622559600.0:vis:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 0.11
+  },
+  {
+    "id": "1622559600.0:vis:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 0.22
+  },
+  {
+    "id": "1622559600.0:vis:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 0.33
+  },
+  {
+    "id": "1622559600.0:vis:fv:3",
+    "dimensionIdx": 3,
+    "featureValue": 0.44
+  },
+  {
+    "id": "1622559600.0:imu:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 9.81
+  },
+  {
+    "id": "1622559600.0:imu:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 0.0
+  },
+  {
+    "id": "1622559600.0:imu:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": -9.81
+  },
+  {
+    "id": "1622559610.2:vis:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 0.15
+  },
+  {
+    "id": "1622559610.2:vis:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 0.25
+  },
+  {
+    "id": "1622559610.2:vis:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 0.35
+  },
+  {
+    "id": "1622559610.2:imu:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 0.0
+  },
+  {
+    "id": "1622559610.2:imu:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 9.81
+  },
+  {
+    "id": "1622559610.2:imu:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 0.0
+  },
+  {
+    "id": "1622559615.8:vis:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 0.12
+  },
+  {
+    "id": "1622559615.8:vis:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 0.24
+  },
+  {
+    "id": "1622559615.8:vis:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 0.36
+  },
+  {
+    "id": "1622559615.8:vis:fv:3",
+    "dimensionIdx": 3,
+    "featureValue": 0.48
+  },
+  {
+    "id": "1622559615.8:vis:fv:4",
+    "dimensionIdx": 4,
+    "featureValue": 0.6
+  },
+  {
+    "id": "1622559615.8:imu:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": -9.81
+  },
+  {
+    "id": "1622559615.8:imu:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 0.0
+  },
+  {
+    "id": "1622559615.8:imu:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 9.81
+  },
+  {
+    "id": "1622559620.0:imu:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 1.23
+  },
+  {
+    "id": "1622559620.0:imu:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 4.56
+  },
+  {
+    "id": "1622559620.0:imu:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 7.89
+  },
+  {
+    "id": "1622559625.3:vis:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 0.05
+  },
+  {
+    "id": "1622559625.3:vis:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 0.1
+  },
+  {
+    "id": "1622559625.3:vis:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 0.15
+  },
+  {
+    "id": "1622559625.3:vis:fv:3",
+    "dimensionIdx": 3,
+    "featureValue": 0.2
+  },
+  {
+    "id": "1622559625.3:imu:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 2.34
+  },
+  {
+    "id": "1622559625.3:imu:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 5.67
+  },
+  {
+    "id": "1622559625.3:imu:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 8.9
+  },
+  {
+    "id": "1622559630.7:vis:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 0.07
+  },
+  {
+    "id": "1622559630.7:vis:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 0.14
+  },
+  {
+    "id": "1622559630.7:vis:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 0.21
+  },
+  {
+    "id": "1622559630.7:vis:fv:3",
+    "dimensionIdx": 3,
+    "featureValue": 0.28
+  },
+  {
+    "id": "1622559630.7:vis:fv:4",
+    "dimensionIdx": 4,
+    "featureValue": 0.35
+  },
+  {
+    "id": "1622559630.7:imu:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 3.45
+  },
+  {
+    "id": "1622559630.7:imu:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 6.78
+  },
+  {
+    "id": "1622559630.7:imu:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 9.01
+  },
+  {
+    "id": "1622559640.4:vis:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 0.02
+  },
+  {
+    "id": "1622559640.4:vis:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 0.04
+  },
+  {
+    "id": "1622559640.4:vis:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 0.06
+  },
+  {
+    "id": "1622559640.4:imu:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 4.56
+  },
+  {
+    "id": "1622559640.4:imu:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 7.89
+  },
+  {
+    "id": "1622559640.4:imu:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 1.23
+  },
+  {
+    "id": "1622559645.9:vis:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 0.09
+  },
+  {
+    "id": "1622559645.9:vis:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 0.18
+  },
+  {
+    "id": "1622559645.9:vis:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 0.27
+  },
+  {
+    "id": "1622559645.9:vis:fv:3",
+    "dimensionIdx": 3,
+    "featureValue": 0.36
+  },
+  {
+    "id": "1622559645.9:imu:fv:0",
+    "dimensionIdx": 0,
+    "featureValue": 5.67
+  },
+  {
+    "id": "1622559645.9:imu:fv:1",
+    "dimensionIdx": 1,
+    "featureValue": 8.9
+  },
+  {
+    "id": "1622559645.9:imu:fv:2",
+    "dimensionIdx": 2,
+    "featureValue": 2.34
+  }
+]

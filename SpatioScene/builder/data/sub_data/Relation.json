@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1622559600.0:rel",
+    "relationE": 1,
+    "relationD": 2,
+    "relationC": 3,
+    "relationA": 4,
+    "relationB": 5
+  },
+  {
+    "id": "1622559605.5:rel",
+    "relationE": 2,
+    "relationD": 3,
+    "relationC": 4,
+    "relationA": 5,
+    "relationB": 6
+  },
+  {
+    "id": "1622559610.2:rel",
+    "relationE": 3,
+    "relationD": 4,
+    "relationC": 5,
+    "relationA": 6,
+    "relationB": 7
+  },
+  {
+    "id": "1622559615.8:rel",
+    "relationE": 4,
+    "relationD": 5,
+    "relationC": 6,
+    "relationA": 7,
+    "relationB": 8
+  },
+  {
+    "id": "1622559620.0:rel",
+    "relationE": 5,
+    "relationD": 6,
+    "relationC": 7,
+    "relationA": 8,
+    "relationB": 9
+  },
+  {
+    "id": "1622559625.3:rel",
+    "relationE": 6,
+    "relationD": 7,
+    "relationC": 8,
+    "relationA": 9,
+    "relationB": 10
+  },
+  {
+    "id": "1622559630.7:rel",
+    "relationE": 7,
+    "relationD": 8,
+    "relationC": 9,
+    "relationA": 10,
+    "relationB": 11
+  },
+  {
+    "id": "1622559635.1:rel",
+    "relationE": 8,
+    "relationD": 9,
+    "relationC": 10,
+    "relationA": 11,
+    "relationB": 12
+  },
+  {
+    "id": "1622559640.4:rel",
+    "relationE": 9,
+    "relationD": 10,
+    "relationC": 11,
+    "relationA": 12,
+    "relationB": 13
+  },
+  {
+    "id": "1622559645.9:rel",
+    "relationE": 10,
+    "relationD": 11,
+    "relationC": 12,
+    "relationA": 13,
+    "relationB": 14
+  }
+]

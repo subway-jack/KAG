@@ -1,20 +1,22 @@
 #------------project configuration start----------------#
 openie_llm: &openie_llm
   type: maas
-  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1/
-  api_key: key
-  model: qwen2.5-7b-instruct-1m
+  base_url: https://api.siliconflow.cn/
+  api_key: sk-aqpbjfuhcbiyklnpzipjqgfgzjfunvlhgnercsgbcueeilke
+  model: deepseek-ai/DeepSeek-V2.5
   enable_check: false
+  max_tokens: 4096
 
 chat_llm: &chat_llm
   type: maas
-  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1/
-  api_key: key
-  model: qwen2.5-72b-instruct
+  base_url: https://api.siliconflow.cn/
+  api_key: sk-aqpbjfuhcbiyklnpzipjqgfgzjfunvlhgnercsgbcueeilke
+  model: deepseek-ai/DeepSeek-V2.5
   enable_check: false
+  max_tokens: 4096
 
 vectorize_model: &vectorize_model
-  api_key: key
+  api_key: sk-aqpbjfuhcbiyklnpzipjqgfgzjfunvlhgnercsgbcueeilke
   base_url: https://api.siliconflow.cn/v1/
   model: BAAI/bge-m3
   type: openai
@@ -22,54 +24,46 @@ vectorize_model: &vectorize_model
   enable_check: false
 vectorizer: *vectorize_model
 
-
 log:
   level: INFO
-project:
-  biz_scene: default
-  host_addr: http://127.0.0.1:8887
-  id: '7'
-  language: zh
-  namespace: BaiKe
 
+project:
+  biz_scene: spatiotemporal
+  host_addr: http://127.0.0.1:8887
+  id: '2'
+  language: en
+  namespace: SpatioScene
 #------------project configuration end----------------#
 
-#------------kag-builder configuration start----------------#
-kag_builder_pipeline:
-  chain:
-    type: unstructured_builder_chain # kag.builder.default_chain.DefaultUnstructuredBuilderChain
-    extractor:
-      type: schema_constraint_extractor # kag.builder.component.extractor.schema_constraint_extractor.SchemaConstraintExtractor
-      llm: *openie_llm
-      ner_prompt:
-        type: spg_entity # kag.builder.prompt.spg_prompt.SPGEntityPrompt
-      event_prompt:
-        type: spg_event # kag.builder.prompt.spg_prompt.SPGEventPrompt
-      std_prompt:
-        type: default_std # kag.builder.prompt.default.std.OpenIEEntitystandardizationdPrompt
-      relation_prompt:
-        type: spg_relation # kag.builder.prompt.spg_prompt.SPGRelationPrompt
-    reader:
-      type: txt_reader # kag.builder.component.reader.txt_reader.TXTReader
-    post_processor:
-      type: kag_post_processor # kag.builder.component.postprocessor.kag_postprocessor.KAGPostProcessor
-    splitter:
-      type: length_splitter # kag.builder.component.splitter.length_splitter.LengthSplitter
-      split_length: 300
-      window_length: 0
-    vectorizer:
-      type: batch_vectorizer # kag.builder.component.vectorizer.batch_vectorizer.BatchVectorizer
-      vectorize_model: *vectorize_model
-    writer:
-      type: kg_writer # kag.builder.component.writer.kg_writer.KGWriter
-  num_threads_per_chain: 2
-  num_chains: 20
+json_runner:
+  # 1. 原始 JSON Scanner，逐条读取每个 MotionSample 对象
   scanner:
-    type: dir_file_scanner # kag.builder.component.scanner.directory_scanner.DirectoryScanner
+    type: json_scanner
+
+  # 2. 构建器链，使用 SPG 映射把 JSON 转成实体
+  chain:
+    type: structured_builder_chain
+    mapping:
+      type: spg_mapping
+      id_field: id
+
+    # 3. 最终写入 KG
+    writer:
+      type: kg_writer
+
 #------------kag-builder configuration end----------------#
 
-#------------kag-solver configuration start----------------#
+#------------schema configuration start----------------#
+schema:
+  - ./schema/spatiotemporal.schema
+#------------schema configuration end----------------#
 
+#------------kag-solver configuration start----------------#
+search_api:
+  type: openspg_search_api
+
+graph_api:
+  type: openspg_graph_api
 
 kg_cs:
   type: kg_cs_open_spg
@@ -79,7 +73,7 @@ kg_cs:
     type: entity_linking
     recognition_threshold: 0.9
     exclude_types:
-      - "Chunk"
+      - Chunk
 
 kg_fr:
   type: kg_fr_open_spg
@@ -116,7 +110,7 @@ kag_hybrid_executor: &kag_hybrid_executor_conf
   type: kag_hybrid_executor
   lf_rewriter:
     type: kag_spo_lf
-    llm_client: *openie_llm
+    llm_client: *chat_llm
     lf_trans_prompt:
       type: default_spo_retriever_decompose
     vectorize_model: *vectorize_model
@@ -125,22 +119,23 @@ kag_hybrid_executor: &kag_hybrid_executor_conf
 
 kag_output_executor: &kag_output_executor_conf
   type: kag_output_executor
+
 kag_deduce_executor: &kag_deduce_executor_conf
   type: kag_deduce_executor
 
 py_code_based_math_executor: &py_code_based_math_executor_conf
   type: py_code_based_math_executor
-  llm: *openie_llm
+  llm: *chat_llm
 
 solver_pipeline:
   type: kag_static_pipeline
   planner:
-    type: kag_static_planner
+    type: lf_kag_static_planner
     llm: *chat_llm
     plan_prompt:
-      type: default_lf_static_planning
-    rewrite_prompt:prompt:
-      type: default_query_rewrite
+      type: spatioScene_lf_static_planning
+    rewrite_prompt:
+      type: spatioScene_rewrite_sub_task_query
   executors:
     - *kag_hybrid_executor_conf
     - *py_code_based_math_executor_conf
@@ -150,6 +145,6 @@ solver_pipeline:
     type: llm_generator
     llm_client: *chat_llm
     generated_prompt:
-      type: default_refer_generator_prompt
+      type: spatioScene_refer_generator_prompt
     enable_ref: true
 #------------kag-solver configuration end----------------#

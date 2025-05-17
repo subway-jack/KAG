@@ -137,10 +137,16 @@ class SPGTypeMapping(MappingABC):
         s_label = self.spg_type.name_en
 
         for prop_name, prop_value in properties.items():
+            
             if not prop_value or prop_value == pandas.NaT:
                 continue
+            
             if prop_name in self.spg_type.properties:
                 prop = self.spg_type.properties.get(prop_name)
+                # print(prop_name, prop_value)
+                # print(prop_name)
+                # print(prop)
+                
                 o_label = prop.object_type_name_en
                 if o_label not in BASIC_TYPES:
                     prop_value_list = prop_value.split(",")
@@ -170,7 +176,7 @@ class SPGTypeMapping(MappingABC):
             sub_graph.add_node(
                 id=s_id, name=s_name, label=s_label, properties=properties
             )
-
+        # print(sub_graph)
         return sub_graph
 
     def hypernym_predicate(self, sub_graph: SubGraph, concept_id: str):
